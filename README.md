@@ -28,7 +28,7 @@ qemu-system-x86_64 -M microvm -enable-kvm -cpu host -m 512m -kernel ../linux-6.1
 - `-M microvm`: The microvm architecture which is minimal hardware (no PCI bus, no ACPI power management for example)
 - `-enable-kvm`: Use of the KVM hypervisor from the Linux Kernel on the host machine
 - `-kernel ../linux-6.10.3/arch/x86/boot/bzImage`: This is the path to the kernel you've compiled from the configuration file
-- `-append "earlyprintk=ttyS0 console=ttyS0 root=/dev/vda1 debug  ip=on": The kernel parameters. `debug` can be safely removed. Remove also `ip=on` if you don't need network. You can also add `init=/bin/sh` to only boot the kernel and see how long it takes (less than a second hopefully)
+- `-append "earlyprintk=ttyS0 console=ttyS0 root=/dev/vda1 debug  ip=on`: The kernel parameters. `debug` can be safely removed. Remove also `ip=on` if you don't need network. You can also add `init=/bin/sh` to only boot the kernel and see how long it takes (less than a second hopefully)
 - `-nodefaults`: gives us the minimal hardware, and not the default one
 - `-no-user-config`: only the configuration from the command line is used, any configuration file from the user is discarded
 - `-nographic`: cli mode, no graphics
